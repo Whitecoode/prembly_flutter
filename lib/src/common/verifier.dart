@@ -1,4 +1,4 @@
-import 'package:prembly/src/api/api_endpoints.dart';
+import 'package:prembly_flutter/src/api/api_endpoints.dart';
 
 class Verifier {
   Verifier({required this.appID, required this.apiKey});
@@ -9,9 +9,9 @@ class Verifier {
   // Email verification [Email]
   Future<dynamic> emailVerifier(String email) async {
     try {
-      await GlobalVerification()
-          .verifyEmail(email: email, apiKey: apiKey, appId: appID)
-          .then((value) => value);
+      var response = await GlobalVerification()
+          .verifyEmail(email: email, apiKey: apiKey, appId: appID);
+      return response;
     } catch (e) {
       rethrow;
     }
@@ -21,9 +21,9 @@ class Verifier {
   // Company name search
   Future<dynamic> companyNameSearch(dynamic payload) async {
     try {
-      await GlobalVerification()
-          .companyNameSearch(payload: payload, apiKey: apiKey, appId: appID)
-          .then((value) => value);
+      var response = await GlobalVerification()
+          .companyNameSearch(payload: payload, apiKey: apiKey, appId: appID);
+      return response;
     } catch (e) {
       rethrow;
     }
@@ -32,9 +32,9 @@ class Verifier {
   // companyRegisteredNumberSearch
   Future<dynamic> companyRegisteredNumberSearch(dynamic payload) async {
     try {
-      await GlobalVerification()
-          .companyNameSearch(payload: payload, apiKey: apiKey, appId: appID)
-          .then((value) => value);
+      var response = await GlobalVerification()
+          .companyNameSearch(payload: payload, apiKey: apiKey, appId: appID);
+      return response;
     } catch (e) {
       rethrow;
     }
@@ -45,13 +45,12 @@ class Verifier {
   // Plate number verification [PlateNumber]
   Future<dynamic> plateNumberVerifier(String plateNumber) async {
     try {
-      await NigeriaNumberBaseVerification()
-          .verifyPlateNumber(
-            plateNumber: plateNumber,
-            apiKey: apiKey,
-            appId: appID,
-          )
-          .then((value) => value);
+      var response = await NigeriaNumberBaseVerification().verifyPlateNumber(
+        plateNumber: plateNumber,
+        apiKey: apiKey,
+        appId: appID,
+      );
+      return response;
     } catch (e) {
       rethrow;
     }

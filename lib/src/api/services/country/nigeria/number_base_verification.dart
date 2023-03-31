@@ -22,7 +22,7 @@ class NigeriaNumberBaseVerification {
           'app-id': appId,
         },
       );
-      print(response.body);
+
       return json.decode(response.body);
     } catch (e) {
       rethrow;
@@ -46,7 +46,7 @@ class NigeriaNumberBaseVerification {
           'app-id': appId,
         },
       );
-      print(response.body);
+
       return json.decode(response.body);
     } catch (e) {
       rethrow;
@@ -70,7 +70,7 @@ class NigeriaNumberBaseVerification {
           'app-id': appId,
         },
       );
-      print(response.body);
+
       return json.decode(response.body);
     } catch (e) {
       rethrow;

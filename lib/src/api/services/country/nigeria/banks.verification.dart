@@ -20,7 +20,7 @@ class NigeriaBanks {
           'app-id': appId,
         },
       );
-      print(response.body);
+
       return json.decode(response.body);
     } catch (e) {
       rethrow;
@@ -45,7 +45,7 @@ class NigeriaBanks {
           'app-id': appId,
         },
       );
-      print(response.body);
+
       return json.decode(response.body);
     } catch (e) {
       rethrow;

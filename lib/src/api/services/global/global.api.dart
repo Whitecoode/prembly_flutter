@@ -22,7 +22,6 @@ class GlobalVerification {
           'app-id': appId,
         },
       );
-
       return json.decode(response.body);
     } catch (e) {
       rethrow;
@@ -48,7 +47,6 @@ class GlobalVerification {
           'app-id': appId,
         },
       );
-      var output = json.decode(response.body);
       return json.decode(response.body);
     } catch (e) {
       rethrow;
@@ -73,7 +71,6 @@ class GlobalVerification {
           'app-id': appId,
         },
       );
-      var output = json.decode(response.body);
       return json.decode(response.body);
     } catch (e) {
       rethrow;
